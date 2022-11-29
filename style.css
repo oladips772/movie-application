@@ -1,0 +1,108 @@
+/** @format */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&display=swap");
+* {
+  margin: 0px;
+  padding: 0px;
+  font-family: "Poppins", sans-serif;
+}
+body {
+  background-image: url("https://thurrott.s3.amazonaws.com/wp-content/uploads/sites/2/2022/01/14172326/netflix.jpg");
+  background-size: cover;
+}
+
+nav {
+  height: 60px;
+  background-color: rgba(0, 0, 0, 0.735);
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+nav img {
+  height: 50px;
+  object-fit: contain;
+}
+
+nav a {
+  margin: 8px;
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  position: relative;
+  z-index: 9;
+  transition: all 0.3s ease;
+}
+nav a::after {
+  position: absolute;
+  content: "";
+  background-color: red;
+  height: 3px;
+  bottom: -3;
+  width: 0;
+  left: 0;
+  transition: all 0.3s ease;
+}
+
+nav a:hover::after {
+  width: 100%;
+}
+
+main {
+  height: calc(100vh - 60px);
+  background-color: rgba(0, 0, 0, 0.451);
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+  /* max-width: 1200px; */
+  padding: 10px 60px;
+  margin: 0 auto;
+  margin-bottom: 40px;
+}
+
+.movie_item {
+  border-radius: 5px;
+  /* overflow: hidden; */
+  height: 420px;
+  width: 400px;
+  position: relative;
+  transition: all 0.3s ease;
+  border: 1px solid lightgray;
+}
+
+main .movie_item img {
+  height: 420px;
+  width: 400px;
+  object-fit: cover;
+}
+
+.movie_item .movie_info {
+  color: white;
+  background-color: rgba(0, 0, 0, 0.677);
+  padding: 10px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  opacity: 0;
+  overflow-y: scroll;
+  height: 400px;
+  transition: all 0.3s ease;
+}
+
+.movie_item:hover .movie_info {
+  opacity: 1;
+}
+
+main .movie_item .movie_images {
+  display: grid !important;
+  grid-template-columns: 1fr 1fr !important;
+  background-color: rgba(0, 0, 0, 0.677);
+  padding: 5px;
+}
+
+main .movie_item .movie_images img {
+  height: 220px;
+  border-radius: 4px;
+  width: 150px;
+  object-fit: cover;
+  margin: 6px;
+}
