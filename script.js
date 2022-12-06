@@ -73,41 +73,6 @@ const movies = [
   },
 ];
 
-//  <div>
-
-//    <div class="movie_item">
-//      <img
-//        src="https://cdn.vanguardngr.com/wp-content/uploads/2022/10/images-6-19-1.jpeg"
-//        alt=""
-//      />
-//      <div class="movie_info">
-//        <h3>Black Panther 2022</h3>
-//        <p>
-//          Queen Ramonda, Shuri, M'Baku, Okoye and the Dora Milaje fight to
-//          protect their nation from intervening world powers in the wake of King
-//          T'Challa's death. As the Wakandans strive to embrace their next
-//          chapter, the heroes must band together with Nakia and Everett Ross to
-//          forge a new path for their beloved kingdom
-//        </p>
-//        <h3>More Episodes</h3>
-//        <div class="movie_images">
-//          <img
-//            src="https://cdn.vanguardngr.com/wp-content/uploads/2022/10/images-6-19-1.jpeg"
-//            alt=""
-//          />
-//          <img
-//            src="https://cdn.vanguardngr.com/wp-content/uploads/2022/10/images-6-19-1.jpeg"
-//            alt=""
-//          />
-//          <img
-//            src="https://cdn.vanguardngr.com/wp-content/uploads/2022/10/images-6-19-1.jpeg"
-//            alt=""
-//          />
-//        </div>
-//      </div>
-//    </div>
-//  </div>;
-
 const mainContainer = document.querySelector("main");
 
 function createMovies() {
@@ -127,9 +92,10 @@ function createMovies() {
             </p>
             <h3>More Episodes</h3>
             <div class="movie_images">
-            <div class="crazy">
-            ${movie.images.map((image) => `<img src=${image} />`)}
-            </div>
+            <img src=${movie.images[0]} />
+            <img src=${movie.images[1]} />
+            <img src=${movie.images[2]} />
+            <img src=${movie.images[1]} />
             </div>
           </div>
         </div>

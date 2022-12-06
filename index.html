@@ -21,7 +21,27 @@
       </div>
     </nav>
     <main>
-     
+      <div>
+        <div class="movie_item">
+          <img
+            src=${movie.mainImage}
+            alt=""
+          />
+          <div class="movie_info">
+            <h3>${movie.name}</h3>
+            <p>
+              ${movie.about}
+            </p>
+            <h3>More Episodes</h3>
+            <div class="movie_images">
+            <img src=${movie.images[0]} />
+            <img src=${movie.images[1]} />
+            <img src=${movie.images[2]} />
+            <img src=${movie.images[1]} />
+            </div>
+          </div>
+        </div>
+      </div>
     </main>
   </body>
 </html>

@@ -95,14 +95,19 @@ main .movie_item img {
 main .movie_item .movie_images {
   display: grid !important;
   grid-template-columns: 1fr 1fr !important;
-  background-color: rgba(0, 0, 0, 0.677);
   padding: 5px;
+  gap: 10px;
 }
 
 main .movie_item .movie_images img {
   height: 220px;
   border-radius: 4px;
-  width: 150px;
+  width: 160px;
   object-fit: cover;
   margin: 6px;
+  transition: all 0.3s ease;
 }
+main .movie_item .movie_images img:hover {
+  transform: scale(1.08);
+}
+
